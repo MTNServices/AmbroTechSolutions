@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AmbroTech Solutions – Electronics & Accessories Online</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a4da2;--acc:#15803d;--acc2:#116c33;--bg:#ffffff;--card:#ffffff;--tx:#14212f;--mut:#566577;--line:#dbe4ef;--tile:#eef5fd;--ok:#15803d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.w{max-width:1240px;margin:0 auto;padding:0 18px}
+.top{background:var(--ink);color:#fff;font-size:13px}
+.top .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+.top span{opacity:.9}.pay{font-weight:700;color:#a7f3c4}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.hd{display:flex;align-items:center;gap:20px;padding:14px 0}
+.logo{font-weight:800;font-size:23px;letter-spacing:-.5px;color:var(--ink);white-space:nowrap}
+.logo b{color:var(--acc)}
+.search{flex:1;display:flex;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:var(--bg)}
+.search input{flex:1;border:0;background:transparent;padding:10px 14px;color:var(--tx);font:inherit;min-width:0}
+.search button{border:0;background:var(--ink);color:#fff;padding:0 20px;font-weight:700}
+.acts{display:flex;gap:8px}
+.ib{border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:8px;padding:9px 13px;font-weight:700;display:flex;gap:6px;align-items:center}
+.ib.cart{background:var(--acc);border-color:var(--acc);color:#fff}
+nav{background:var(--ink)}
+nav .w{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav a{color:#fff;padding:12px 15px;white-space:nowrap;font-weight:500;font-size:14px}
+nav a:hover{background:rgba(255,255,255,.12)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:0;margin:22px 0;background:linear-gradient(120deg,#0a4da2,#1e7fd6 70%,#22a45d);border-radius:14px;overflow:hidden;color:#fff}
+.hero .t{padding:46px 42px}
+.tag{display:inline-block;background:var(--acc);color:#fff;font-weight:800;font-size:12px;padding:4px 11px;border-radius:99px}
+.hero h1{font-size:clamp(26px,4vw,42px);line-height:1.12;margin:14px 0 10px;letter-spacing:-1px;max-width:15em}
+.hero p{margin:0 0 18px;opacity:.85;max-width:34em}
+.pr{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:20px}
+.pr b{font-size:30px}.pr s{opacity:.6}.pr em{font-style:normal;background:#fff;color:var(--ink);font-weight:800;font-size:12px;padding:3px 9px;border-radius:5px}
+.btn{display:inline-block;background:var(--acc);color:#fff;border:0;font-weight:800;padding:12px 24px;border-radius:8px}
+.btn:hover{background:var(--acc2)}
+.hero .v img{max-width:82%;max-height:320px;object-fit:contain;border-radius:12px}.hero .v{display:grid;place-items:center;font-size:16px;min-height:260px;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.22),transparent 65%)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:34px}
+.trust div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.trust b{display:block}.trust span{color:var(--mut);font-size:13px}
+.sh{display:flex;justify-content:space-between;align-items:end;margin:34px 0 14px;gap:10px}
+.sh h2{margin:0;font-size:24px;letter-spacing:-.5px}.sh p{margin:2px 0 0;color:var(--mut)}
+.sh a{color:var(--acc);font-weight:700;white-space:nowrap}
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 8px;text-align:center;font-weight:700;font-size:14px}
+.cat i{display:block;font-style:normal;font-size:34px;margin-bottom:6px}
+.cat:hover{border-color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;flex-direction:column;position:relative}
+.p:hover{border-color:var(--acc)}
+.ph img{width:100%;height:100%;object-fit:cover}.ph{font-size:16px;overflow:hidden;background:var(--tile);border-radius:8px;aspect-ratio:1.25;display:grid;place-items:center;font-size:64px}
+.off{position:absolute;top:18px;left:18px;background:var(--acc);color:#fff;font-weight:800;font-size:12px;padding:2px 8px;border-radius:5px}
+.br{color:var(--mut);font-size:12px;font-weight:700;margin-top:10px}
+.p h3{font-size:14px;margin:2px 0 8px;line-height:1.35;font-weight:500;flex:1}
+.pp{display:flex;gap:8px;align-items:baseline;margin-bottom:4px;flex-wrap:wrap}
+.pp b{font-size:16px;color:var(--ink)}.pp s{color:var(--mut);font-size:12px}
+.st{font-size:12px;color:var(--ok);font-weight:700;margin-bottom:10px}.st.o{color:var(--mut)}
+.add{border:2px solid var(--ink);background:transparent;color:var(--ink);font-weight:800;border-radius:7px;padding:8px}
+.add:hover{background:var(--ink);color:#fff}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:36px;margin-top:40px}
+.about h2{margin:0 0 10px;font-size:26px}.about h4{margin:16px 0 4px}.about p{margin:0;color:var(--mut)}
+.about .a{background:var(--tile);border-radius:10px;display:grid;place-items:center;font-size:110px;min-height:220px}
+.brands{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.brands a{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 6px;text-align:center;font-weight:800;letter-spacing:.5px}
+.brands a small{display:block;font-weight:500;color:var(--mut);letter-spacing:0;font-size:12px}
+.brands a:hover{border-color:var(--acc)}
+.shops{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.shop{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.shop h3{margin:0 0 6px}.shop p{margin:2px 0;color:var(--mut)}
+footer{background:var(--ink);color:#cfd8e3;margin-top:50px;padding:40px 0 20px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px}
+footer h4{color:#fff;margin:0 0 10px}footer a{display:block;padding:3px 0;opacity:.85}footer a:hover{opacity:1;color:#a7f3c4}
+footer p{margin:0 0 6px}.cp{border-top:1px solid rgba(255,255,255,.15);margin-top:26px;padding-top:14px;font-size:13px}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#15803d;color:#fff;font-weight:800;border-radius:99px;padding:12px 18px;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:30}
+.dr{position:fixed;inset:0 0 0 auto;width:min(380px,100%);background:var(--card);z-index:40;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;box-shadow:-8px 0 30px rgba(0,0,0,.25);padding-top:env(safe-area-inset-top,0px)}
+.dr.on{transform:none}
+.dr header{position:static;display:flex;justify-content:space-between;align-items:center;padding:16px;font-weight:800;font-size:18px}
+.dr .ls{flex:1;overflow:auto;padding:0 16px}
+.ci{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.ci .ct{font-size:28px;width:44px;height:44px;display:grid;place-items:center;overflow:hidden;border-radius:6px;flex:none}.ci .ct img{width:100%;height:100%;object-fit:cover}.ci div{flex:1;font-size:13px}.ci button{border:0;background:var(--tile);color:var(--tx);border-radius:6px;width:26px;height:26px}
+.dr footer{background:var(--card);color:var(--tx);margin:0;padding:16px calc(16px + env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+.dr .btn{width:100%;text-align:center}
+
+.md{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:50;display:grid;place-items:center;padding:12px}
+.md[hidden],#adm[hidden]{display:none}
+.mb{background:var(--card);border-radius:12px;width:min(980px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden}
+.mh,.mt,.mf{display:flex;gap:10px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.mh b{font-size:18px;flex:1}.mh span{color:var(--ok);font-weight:700;font-size:13px}
+.mt input{flex:1}.mf{border:0;border-top:1px solid var(--line)}.mf span{color:var(--mut);font-size:13px}
+.ml{overflow:auto;padding:8px 16px;flex:1}
+.mr{display:grid;grid-template-columns:48px 1fr 1.8fr 88px 88px 100px 100px 34px;gap:6px;padding:6px 0;border-bottom:1px solid var(--line);align-items:center}
+.mr input,.mr select,.mt input{background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:7px;font:inherit;font-size:13px;min-width:0;width:100%}
+.mr.hh{font-weight:700;font-size:12px;color:var(--mut);position:sticky;top:0;background:var(--card)}
+.mr label{font-size:12px;display:flex;gap:4px;align-items:center}.mr .x{border:0;background:transparent;color:#d33;font-size:18px}
+@media(max-width:900px){.mr{grid-template-columns:1fr 1fr}.mr.hh{display:none}.mr{border:1px solid var(--line);border-radius:8px;padding:8px;margin:8px 0}}
+.pg h1,#v-shop h1,#v-p h1{letter-spacing:-.6px;margin:6px 0 12px}.pg p{max-width:46em;color:var(--mut)}.pg .trust{margin:18px 0}.bc{color:var(--mut);font-size:13px;margin:18px 0 0}.bc a{color:var(--acc)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}.chips a{border:1px solid var(--line);background:var(--card);padding:7px 14px;border-radius:99px;font-weight:700;font-size:13px}.chips a.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tb{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;color:var(--mut)}.tb select,.cf input,.cf textarea{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:9px;font:inherit}
+.cf{display:grid;gap:10px;max-width:520px;margin:26px 0}.cf h2{margin:0}.cf .btn{border:0}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0;max-width:46em}summary{font-weight:700;cursor:pointer}details p{margin:8px 0 0}
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:14px 0 10px}.pd .ph{aspect-ratio:1}.pd .pp b{font-size:30px}.pd .pp s{font-size:15px}.pd .btn{border:0;margin:6px 8px 6px 0}.pd .btn.g{background:#0a4da2}
+.p h3 a:hover,.ph{color:inherit}
+@media(max-width:900px){.pd{grid-template-columns:1fr}}
+.np{display:grid;gap:2px;text-align:center;color:var(--ink);padding:8px}.np b{font-size:20px;letter-spacing:.5px}.np small{color:var(--mut);font-size:12px}
+.ci .ct .np{padding:0}.ci .ct .np small{display:none}.ci .ct .np b{font-size:9px}
+.hero .v .np{color:#fff}.hero .v .np b{font-size:34px}.hero .v .np small{color:#fff;opacity:.8;font-size:14px}
+.cat svg{width:38px;height:38px;fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:6px}
+.cat i{display:block;font-style:normal}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero .v{font-size:90px;padding:10px}.grid{grid-template-columns:repeat(2,1fr)}.cats,.brands{grid-template-columns:repeat(3,1fr)}.trust{grid-template-columns:1fr 1fr}.about,.shops,.fg{grid-template-columns:1fr}.hd{flex-wrap:wrap}.search{order:3;flex-basis:100%}.acts{margin-left:auto}.hero .t{padding:30px 22px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="top"><div class="w"><span>+254719800656 · ambrotech@gmail.com</span><span class="pay">Pay with M-Pesa · Delivery countrywide</span></div></div>
+<header><div class="w hd">
+<a class="logo" href="#/">Ambro<b>Tech</b> Solutions</a>
+<form class="search" onsubmit="return find(event)"><input id="q" type="search" placeholder="Search phones, chargers, earbuds, laptops…" aria-label="Search products"><button>Search</button></form>
+<div class="acts"><button class="ib" id="adm" hidden>Manage products</button><button class="ib" id="wl">Wishlist</button><button class="ib cart" id="oc">Cart <span id="cc">0</span> · <span id="ct">KSh 0</span></button></div>
+</div>
+<nav><div class="w"><a href="#/">Home</a><a href="#/shop">Shop</a><a href="#/shop/phones">Phones &amp; Tablets</a><a href="#/shop/laptops">Laptops</a><a href="#/shop/audio">Audio</a><a href="#/shop/power">Chargers &amp; Power</a><a href="#/shop/smart">Smart Home</a><a href="#/shop/gaming">Gaming</a><a href="#/about">About</a><a href="#/contact">Contact</a></div></nav>
+</header>
+
+<main class="w view" id="v-home">
+<section class="hero"><div class="t"><span class="tag">DEAL OF THE WEEK</span>
+<h1 id="hT"></h1>
+<p id="hD"></p>
+<div class="pr" id="hP"></div>
+<button class="btn" id="hB">Add to cart</button></div><div class="v" id="hV" aria-hidden="true"></div></section>
+
+<section class="trust"><div><b>Delivery in 1–3 days</b><span>Nairobi and countrywide</span></div><div><b>Warranty on every item</b><span>Genuine products only</span></div><div><b>Pay with M-Pesa</b><span>Paybill or pay on delivery</span></div><div><b>WhatsApp support</b><span>Mon–Sat, 8am–6pm</span></div></section>
+
+<section id="cats"><div class="sh"><div><h2>Shop by category</h2></div></div>
+<div class="cats" id="catg"></div></section>
+
+<section id="deals"><div class="sh"><div><h2>This week's deals</h2><p>Genuine discounts, while stock lasts.</p></div><a href="#/shop">All deals →</a></div><div class="grid" id="g1"></div></section>
+<section><div class="sh"><div><h2>Best sellers</h2><p>What Kenyans are buying most.</p></div><a href="#/shop">Shop all →</a></div><div class="grid" id="g2"></div></section>
+<section><div class="sh"><div><h2>Latest arrivals</h2><p>Newest electronics in stock.</p></div><a href="#/shop">See all →</a></div><div class="grid" id="g3"></div></section>
+
+<section class="about" id="abt"><div><h2>AmbroTech Solutions</h2><p>Your trusted source for quality electronics and accessories in Kenya.</p>
+<h4>What we do</h4><p>We sell phones, laptops, audio, chargers, smart-home gadgets and everyday accessories, online and in store.</p>
+<h4>Quality</h4><p>Genuine products with warranty. No fakes.</p><h4>Transparency</h4><p>Clear prices and honest product information.</p></div><div class="a"><b style="font-size:30px;color:var(--ink)">AmbroTech</b></div></section>
+
+<section><div class="sh"><div><h2>Brands we carry</h2><p>Every brand opens its full range.</p></div></div>
+<div class="brands"><a href="#/shop/q:samsung">SAMSUNG<small>Phones &amp; tablets</small></a><a href="#/shop/q:hp">HP<small>Laptops</small></a><a href="#/shop/q:anker">ANKER<small>Power</small></a><a href="#/shop/q:jbl">JBL<small>Audio</small></a><a href="#/shop/q:tecno">TECNO<small>Phones</small></a><a href="#/shop/q:logitech">LOGITECH<small>Peripherals</small></a></div></section>
+
+<section id="shops"><div class="sh"><div><h2>Contact us</h2><p>Order, ask about stock, or get help choosing.</p></div></div>
+<div class="shops"><div class="shop"><h3>WhatsApp</h3><p>+254719800656</p><p><a href="https://wa.me/254719800656" target="_blank" rel="noopener" style="color:var(--acc);font-weight:700">Start a chat</a></p></div><div class="shop"><h3>Call</h3><p>+254719800656</p><p>Mon–Sat, 9am–6pm</p></div><div class="shop"><h3>Email</h3><p><a href="mailto:ambrotech@gmail.com">ambrotech@gmail.com</a></p><p>We reply within one working day.</p></div></div></section>
+</main>
+<main class="w view" id="v-shop" hidden></main>
+<main class="w view" id="v-p" hidden></main>
+<main class="w view pg" id="v-about" hidden><p class="bc"><a href="#/">Home</a> / About</p><h1>About AmbroTech Solutions</h1>
+<p>AmbroTech Solutions is an online electronics and accessories shop serving customers across Kenya. We stock phones, laptops, audio, chargers, smart-home devices and everyday accessories from brands you know.</p>
+<div class="trust"><div><b>Genuine products</b><span>Every item is original and comes with warranty.</span></div><div><b>Fair prices</b><span>Clear pricing with regular deals.</span></div><div><b>Fast delivery</b><span>Nairobi and countrywide.</span></div><div><b>Real support</b><span>Talk to us on WhatsApp or by phone.</span></div></div>
+<p>Not sure what to buy? Message us what you need and your budget, and we will recommend the best option.</p><a class="btn" href="#/contact">Talk to us</a></main>
+<main class="w view pg" id="v-contact" hidden><p class="bc"><a href="#/">Home</a> / Contact</p><h1>Contact us</h1>
+<div class="shops"><div class="shop"><h3>WhatsApp</h3><p>+254719800656</p><p><a href="https://wa.me/254719800656" target="_blank" rel="noopener" style="color:var(--acc);font-weight:700">Start a chat</a></p></div><div class="shop"><h3>Call</h3><p><a href="tel:+254719800656">+254719800656</a></p><p>Mon–Sat, 9am–6pm</p></div><div class="shop"><h3>Email</h3><p><a href="mailto:ambrotech@gmail.com">ambrotech@gmail.com</a></p><p>We reply within one working day.</p></div></div>
+<form class="cf" onsubmit="return cs(event)"><h2>Send us a message</h2><input id="cn" placeholder="Your name" required aria-label="Your name"><textarea id="cm" rows="4" placeholder="What are you looking for?" required aria-label="Message"></textarea><button class="btn">Send via WhatsApp</button></form></main>
+<main class="w view pg" id="v-faq" hidden><p class="bc"><a href="#/">Home</a> / FAQs</p><h1>FAQs &amp; delivery</h1>
+<details open><summary>How long does delivery take?</summary><p>Orders in Nairobi usually arrive within 1–3 days. Countrywide delivery is sent by courier. We confirm timing on WhatsApp.</p></details>
+<details><summary>How do I pay?</summary><p>We accept M-Pesa. Message us on WhatsApp to confirm your order and get payment details.</p></details>
+<details><summary>Are your products genuine?</summary><p>Yes. We sell original products and every item comes with a warranty.</p></details>
+<details><summary>How do I place an order?</summary><p>Add items to your cart and press "Checkout on WhatsApp". Your order is sent to us and we confirm it with you.</p></details>
+<details><summary>What if an item is faulty?</summary><p>Contact us right away with your order details and we will help with a repair, replacement or refund according to the warranty.</p></details></main>
+
+<footer><div class="w"><div class="fg">
+<div><h4>AmbroTech Solutions</h4><p>Kenya's trusted online shop for quality electronics and accessories. We stock Samsung, HP, Anker, JBL, Tecno, Logitech and more.</p></div>
+<div><h4>Quick links</h4><a href="#/">Home</a><a href="#/shop">Shop</a><a href="#/about">About us</a><a href="#/contact">Contact</a><a href="#/faq">FAQs &amp; delivery</a></div>
+<div><h4>Categories</h4><a href="#/shop/phones">Phones</a><a href="#/shop/laptops">Laptops</a><a href="#/shop/audio">Audio</a><a href="#/shop/power">Chargers &amp; power</a><a href="#/shop/smart">Smart home</a></div>
+<div><h4>Contact</h4><p>+254719800656</p><p>ambrotech@gmail.com</p><a href="https://wa.me/254719800656" target="_blank" rel="noopener">WhatsApp us</a><p>Mon–Sat: 9am–6pm</p></div></div>
+<div class="cp">© AmbroTech Solutions. All rights reserved. · <a href="#" id="al" style="display:inline">Admin</a></div></div></footer>
+
+<a class="wa" href="https://wa.me/254719800656?text=Hi%2C%20I%27m%20browsing%20your%20website%20and%20would%20like%20some%20help." target="_blank" rel="noopener">Chat on WhatsApp</a>
+
+<div class="md" id="md" hidden><div class="mb" role="dialog" aria-label="Manage products">
+<div class="mh"><b>Manage products</b><span id="msg"></span><button class="ib" id="mx">Close</button></div>
+<div class="mt"><input id="mf" placeholder="Filter products…" aria-label="Filter products"><label class="btn" style="cursor:pointer;background:var(--ink)">Bulk photos<input type="file" id="bp" accept="image/*" multiple hidden></label><button class="btn" id="mn">+ New product</button></div>
+<div class="ml" id="ml"></div>
+<div class="mf"><button class="btn" id="ms">Save &amp; publish changes</button><button class="ib" id="mc" type="button">Copy my changes</button><span>Changes go live for all visitors when you save.</span></div></div></div>
+<div class="md" id="pw" hidden><form class="mb" id="pf" style="padding:20px;max-width:340px;gap:10px"><b>Admin login</b><input type="password" id="pi" autocomplete="current-password" placeholder="Password" aria-label="Admin password" style="padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--tx);font:inherit"><span id="pe" style="color:#d33;font-size:13px"></span><button class="btn">Log in</button><button type="button" class="ib" id="pc">Cancel</button></form></div>
+<script type="application/json" id="data">[{"id": "p0", "e": "🔋", "b": "ANKER", "n": "20,000mAh Fast-Charge Power Bank, 22.5W", "p": 3490, "o": 4990, "s": 1, "sec": "deals", "hero": true, "d": "Charges a phone up to 4 times. 22.5W fast charging, dual USB-A and USB-C ports, and a 12-month warranty.", "c": "power"}, {"id": "p1", "e": "🎧", "b": "JBL", "n": "Tune 520BT Wireless On-Ear Headphones", "p": 5900, "o": 7500, "s": 1, "sec": "deals", "hero": false, "c": "audio"}, {"id": "p2", "e": "📱", "b": "SAMSUNG", "n": "Galaxy A15 128GB, 6GB RAM, Dual SIM", "p": 19500, "o": 24999, "s": 1, "sec": "deals", "hero": false, "c": "phones"}, {"id": "p3", "e": "💻", "b": "HP", "n": "HP 15 Laptop, Core i5, 8GB RAM, 512GB SSD", "p": 58500, "o": 72000, "s": 1, "sec": "deals", "hero": false, "c": "laptops"}, {"id": "p4", "e": "⌚", "b": "TECNO", "n": "Watch GT 1 Smartwatch, AMOLED Display", "p": 4200, "o": 5500, "s": 1, "sec": "deals", "hero": false, "c": "acc"}, {"id": "p5", "e": "🔌", "b": "ANKER", "n": "65W GaN USB-C Fast Wall Charger", "p": 3800, "o": 4800, "s": 1, "sec": "deals", "hero": false, "c": "power"}, {"id": "p6", "e": "📺", "b": "TCL", "n": "43 Inch Full HD Smart Android TV", "p": 24900, "o": 31500, "s": 1, "sec": "deals", "hero": false, "c": "smart"}, {"id": "p7", "e": "🖱️", "b": "LOGITECH", "n": "M185 Wireless Mouse, Black", "p": 1100, "o": 1400, "s": 1, "sec": "deals", "hero": false, "c": "acc"}, {"id": "p8", "e": "🔌", "b": "SAMSUNG", "n": "25W USB-C Fast Charger with Cable", "p": 1500, "o": 1500, "s": 1, "sec": "best", "hero": false, "c": "power"}, {"id": "p9", "e": "🎧", "b": "OPPO", "n": "Enco Buds2 True Wireless Earbuds", "p": 3200, "o": 3200, "s": 1, "sec": "best", "hero": false, "c": "audio"}, {"id": "p10", "e": "⌨️", "b": "LOGITECH", "n": "K380 Multi-Device Bluetooth Keyboard", "p": 3900, "o": 3900, "s": 1, "sec": "best", "hero": false, "c": "acc"}, {"id": "p11", "e": "🔊", "b": "JBL", "n": "Flip 6 Portable Waterproof Speaker", "p": 13900, "o": 13900, "s": 1, "sec": "best", "hero": false, "c": "audio"}, {"id": "p12", "e": "📷", "b": "TP-LINK", "n": "Tapo C200 Pan/Tilt Wi-Fi Security Camera", "p": 3300, "o": 3300, "s": 0, "sec": "best", "hero": false, "c": "smart"}, {"id": "p13", "e": "💡", "b": "XIAOMI", "n": "Smart LED Bulb, Wi-Fi, 16M Colours", "p": 1300, "o": 1300, "s": 1, "sec": "best", "hero": false, "c": "smart"}, {"id": "p14", "e": "💾", "b": "SANDISK", "n": "Ultra 128GB USB 3.0 Flash Drive", "p": 1250, "o": 1250, "s": 1, "sec": "best", "hero": false, "c": "acc"}, {"id": "p15", "e": "🎮", "b": "SONY", "n": "DualSense Wireless PS5 Controller", "p": 9800, "o": 11500, "s": 1, "sec": "best", "hero": false, "c": "gaming"}, {"id": "p16", "e": "📱", "b": "TECNO", "n": "Spark 20 Pro 256GB, 8GB RAM", "p": 21500, "o": 24500, "s": 1, "sec": "new", "hero": false, "c": "phones"}, {"id": "p17", "e": "🖥️", "b": "DELL", "n": "24 Inch Full HD IPS Monitor", "p": 15800, "o": 19500, "s": 1, "sec": "new", "hero": false, "c": "laptops"}, {"id": "p18", "e": "📡", "b": "HUAWEI", "n": "4G LTE Router, Sim Card Slot", "p": 5200, "o": 6500, "s": 1, "sec": "new", "hero": false, "c": "smart"}, {"id": "p19", "e": "🔌", "b": "UGREEN", "n": "6-Way Power Extension with USB Ports", "p": 1950, "o": 2400, "s": 1, "sec": "new", "hero": false, "c": "power"}, {"id": "p20", "e": "📱", "b": "APPLE", "n": "iPhone 13 128GB (Refurbished, A-Grade)", "p": 54500, "o": 62000, "s": 1, "sec": "new", "hero": false, "c": "phones"}, {"id": "p21", "e": "🎧", "b": "SONY", "n": "WH-CH520 Wireless Headphones", "p": 6800, "o": 8500, "s": 1, "sec": "new", "hero": false, "c": "audio"}, {"id": "p22", "e": "💻", "b": "LENOVO", "n": "IdeaPad 1, Ryzen 5, 8GB, 256GB SSD", "p": 46500, "o": 54000, "s": 1, "sec": "new", "hero": false, "c": "laptops"}, {"id": "p23", "e": "🖨️", "b": "EPSON", "n": "EcoTank L3250 Wi-Fi Printer", "p": 32500, "o": 36000, "s": 1, "sec": "new", "hero": false, "c": "laptops"}]</script>
+<aside class="dr" id="dr" aria-label="Cart"><header><span>Your cart</span><button class="ib" id="cl">Close</button></header><div class="ls" id="ls"></div>
+<footer><p><b>Total: <span id="tt">KSh 0</span></b></p><a class="btn" href="#" onclick="return chk()">Checkout on WhatsApp</a></footer></aside>
+
+<script>
+let P=JSON.parse(document.getElementById("data").textContent);
+const C=[["📱","Phones & Tablets","phones"],["💻","Laptops","laptops"],["🎧","Audio","audio"],["🔌","Chargers & Power","power"],["💡","Smart Home","smart"],["🎮","Gaming","gaming"]];
+const ICON={phones:'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>',laptops:'<rect x="4" y="5" width="16" height="11" rx="1"/><path d="M2 19h20"/>',audio:'<path d="M4 15v-3a8 8 0 0116 0v3"/><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="17" y="14" width="4" height="6" rx="1"/>',power:'<path d="M13 2L5 14h6l-1 8 8-12h-6z"/>',smart:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>',gaming:'<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 10v5M4.5 12.5h5"/><circle cx="16" cy="11.5" r="1"/><circle cx="18.5" cy="14" r="1"/>'};
+const CATS=[["all","All products"],["phones","Phones & Tablets"],["laptops","Laptops & Computers"],["audio","Audio"],["power","Chargers & Power"],["smart","Smart Home & TV"],["gaming","Gaming"],["acc","Accessories"]];
+const f=n=>"KSh "+Number(n||0).toLocaleString("en-KE");
+const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let cart={};
+const im=x=>/^data:image\//.test(x.img||"")?`<img src="${x.img}" alt="${esc(x.n)}" loading="lazy">`:`<span class="np"><b>${esc(x.b)}</b><small>Photo coming soon</small></span>`;
+const get=id=>P.find(x=>x.id===id);
+function card(x){const d=x.o>x.p?Math.round((x.o-x.p)/x.o*100):0;
+return`<article class="p">${d?`<span class="off">−${d}%</span>`:""}<a class="ph" href="#/p/${x.id}">${im(x)}</a><div class="br">${esc(x.b)}</div><h3><a href="#/p/${x.id}">${esc(x.n)}</a></h3><div class="pp"><b>${f(x.p)}</b>${d?`<s>${f(x.o)}</s>`:""}</div><div class="st ${x.s?"":"o"}">${x.s?"In stock":"Order on request"}</div><button class="add" data-id="${x.id}">Add to cart</button></article>`}
+function render(){
+ for(const[id,sec]of[["g1","deals"],["g2","best"],["g3","new"]])document.getElementById(id).innerHTML=P.filter(x=>x.sec===sec).map(card).join("")||'<p style="color:var(--mut)">No products in this section yet.</p>';
+ const h=P.find(x=>x.hero),sec=document.querySelector(".hero");sec.hidden=!h;
+ if(h){hT.textContent=h.n;hD.textContent=h.d||"";hV.innerHTML=im(h);hB.dataset.id=h.id;
+  const d=h.o>h.p?`<s>${f(h.o)}</s><em>SAVE ${f(h.o-h.p)}</em>`:"";hP.innerHTML=`<b>${f(h.p)}</b>${d}`}
+ draw();paint()}
+document.getElementById("catg").innerHTML=C.map(c=>`<a class="cat" href="#/shop/${c[2]}"><i><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[c[2]]}</svg></i>${c[1]}</a>`).join("");
+document.addEventListener("click",e=>{const b=e.target.closest("[data-id]");if(b&&(b.classList.contains("add")||b.id==="hB"))add(b.dataset.id)});
+function add(id){cart[id]=(cart[id]||0)+1;draw();open_()}
+function draw(){let n=0,t=0,h="";for(const k in cart){const p=get(k);if(!p){delete cart[k];continue}const q=cart[k];n+=q;t+=q*p.p;h+=`<div class="ci"><span class="ct">${im(p)}</span><div>${esc(p.n)}<br><b>${f(p.p)}</b></div><button onclick="ch('${k}',-1)" aria-label="Remove one">−</button><span>${q}</span><button onclick="ch('${k}',1)" aria-label="Add one">+</button></div>`}
+cc.textContent=n;ct.textContent=f(t);tt.textContent=f(t);ls.innerHTML=h||'<p style="color:var(--mut)">Your cart is empty. Add a product to get started.</p>'}
+function ch(k,d){cart[k]+=d;if(cart[k]<1)delete cart[k];draw()}
+function open_(){dr.classList.add("on")}
+oc.onclick=open_;cl.onclick=()=>dr.classList.remove("on");
+wl.onclick=()=>alert("Wishlist: sign in to save items.");
+function chk(){let m="Hi AmbroTech, I'd like to order:%0A",t=0;for(const k in cart){const p=get(k);m+=`• ${cart[k]} × ${p.n} (${f(p.p)})%0A`;t+=cart[k]*p.p}
+if(!t){alert("Your cart is empty.");return false}
+window.open("https://wa.me/254719800656?text="+m+"Total: "+f(t),"_blank");return false}
+function find(e){e.preventDefault();sq=q_.value.toLowerCase().trim();cat="all";window._k=1;go("shop");return false}
+const q_=document.getElementById("q");
+render();
+
+/* ---- Admin: manage products (owner/editors only) ---- */
+let art=null,ok=false;
+(async()=>{try{const u=await claude.use("user");art=await claude.use("artifact");
+ if(u&&art&&await u.canEdit())adm.hidden=false}catch(e){}})();
+const HASH="9fd26cd02f0aea6a4f5df530cc43c1de5a961ff61230c4c1aea9291c247fe27b";
+async function sha(t){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+function openEd(){md.hidden=false;msg.textContent="";rows()}
+al.onclick=e=>{e.preventDefault();if(ok)return openEd();pw.hidden=false;pe.textContent="";pi.value="";pi.focus()};
+pc.onclick=()=>pw.hidden=true;
+pf.onsubmit=async e=>{e.preventDefault();try{if(await sha(pi.value)===HASH){ok=true;pw.hidden=true;openEd()}else pe.textContent="Wrong password."}catch(x){pe.textContent="Login needs a secure (https) page."}};
+function shrink(file){return new Promise((res,rej)=>{const im=new Image(),u=URL.createObjectURL(file);im.onload=()=>{const r=Math.min(1,640/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*r);c.height=Math.round(im.height*r);const x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);res(c.toDataURL("image/jpeg",.8))};im.onerror=()=>rej(new Error("Not an image"));im.src=u})}
+function rows(){const q=mf.value.toLowerCase();
+ ml.innerHTML='<div class="mr hh"><span>Icon</span><span>Brand</span><span>Name</span><span>Price</span><span>Old price</span><span>Stock</span><span>Section</span><span></span></div>'+
+ P.filter(x=>(x.b+x.n).toLowerCase().includes(q)).map(x=>`<div class="mr" data-r="${x.id}">
+ <input data-k="e" value="${esc(x.e)}" aria-label="Icon"><input data-k="b" value="${esc(x.b)}" aria-label="Brand">
+ <input data-k="n" value="${esc(x.n)}" aria-label="Name"><input data-k="p" type="number" min="0" value="${x.p}" aria-label="Price">
+ <input data-k="o" type="number" min="0" value="${x.o}" aria-label="Old price">
+ <select data-k="s" aria-label="Stock"><option value="1"${x.s?" selected":""}>In stock</option><option value="0"${x.s?"":" selected"}>On request</option></select>
+ <select data-k="sec" aria-label="Section">${[["deals","Deals"],["best","Best sellers"],["new","Latest"]].map(a=>`<option value="${a[0]}"${x.sec===a[0]?" selected":""}>${a[1]}</option>`).join("")}</select>
+ <button class="x" data-del="${x.id}" aria-label="Delete product">🗑</button>
+ <div style="grid-column:1/-1;display:flex;gap:8px;align-items:center;flex-wrap:wrap">${/^data:image\//.test(x.img||"")?`<img src="${x.img}" alt="" style="width:44px;height:44px;object-fit:cover;border-radius:6px">`:""}<select data-k="c" aria-label="Category">${CATS.slice(1).map(a=>`<option value="${a[0]}"${x.c===a[0]?" selected":""}>${a[1]}</option>`).join("")}</select><label class="ib" style="cursor:pointer">📷 ${x.img?"Change":"Add"} photo<input type="file" accept="image/*" data-ph="${x.id}" hidden></label>${x.img?`<button class="ib" data-rm="${x.id}">Remove photo</button>`:""}<label style="font-size:12px"><input type="checkbox" data-k="hero"${x.hero?" checked":""} style="width:auto"> Deal of the week (hero banner)</label></div>
+ ${x.hero?`<input data-k="d" value="${esc(x.d||"")}" placeholder="Hero description" style="grid-column:1/-1" aria-label="Hero description">`:""}</div>`).join("")}
+
+const tok=t=>t.toLowerCase().replace(/[^a-z0-9]+/g," ").split(" ").filter(w=>w.length>2);
+bp.onchange=async()=>{let ok=0,miss=[];msg.style.color="";msg.textContent="Processing photos…";
+ for(const fl of bp.files){const ft=tok(fl.name.replace(/\.[^.]+$/,""));let best=null,bs=0;
+  for(const x of P){const sc=tok(x.b+" "+x.n).filter(w=>ft.includes(w)).length;if(sc>bs){bs=sc;best=x}}
+  if(best&&bs>=2){try{best.img=await shrink(fl);ok++}catch(e){miss.push(fl.name)}}else miss.push(fl.name)}
+ bp.value="";rows();render();msg.style.color=miss.length?"#b45309":"";
+ msg.textContent=ok+" photo(s) matched."+(miss.length?" Not matched (rename to include the product name, or add by hand): "+miss.join(", "):"")+" Remember to save."};
+mc.onclick=async()=>{const t=JSON.stringify(P.map(({img,...r})=>r));try{await navigator.clipboard.writeText(t);msg.style.color="";msg.textContent="Copied. Paste it in your chat with Claude and ask to publish it (photos are not included)."}catch(e){prompt("Copy this and send it to Claude:",t)}};
+adm.onclick=openEd;mx.onclick=()=>md.hidden=true;mf.oninput=rows;
+mn.onclick=()=>{P.unshift({id:"p"+Date.now(),e:"📦",b:"Brand",n:"New product",p:1000,o:1000,s:1,sec:"deals",c:"acc",hero:false});mf.value="";rows();render()};
+ml.addEventListener("change",async e=>{const t=e.target,r=t.closest("[data-r]");if(!r)return;const x=get(r.dataset.r);
+ if(t.dataset.ph){if(!t.files[0])return;msg.style.color="";msg.textContent="Processing photo…";try{x.img=await shrink(t.files[0]);msg.textContent="Photo added. Remember to save."}catch(err){msg.style.color="#d33";msg.textContent=err.message}rows();render();return}
+ const k=t.dataset.k;if(!k)return;let v=t.type==="checkbox"?t.checked:t.value;
+ if(k==="p"||k==="o")v=Math.max(0,+v||0);if(k==="s")v=+v;
+ if(k==="hero"&&v)P.forEach(y=>y.hero=false);x[k]=v;if(k==="hero")rows();render()});
+ml.addEventListener("click",e=>{const d=e.target.dataset.del,rm=e.target.dataset.rm;
+ if(rm){delete get(rm).img;rows();render()}
+ if(d&&confirm("Delete this product?")){P=P.filter(x=>x.id!==d);rows();render()}});
+ms.onclick=async()=>{msg.style.color="";
+ if(!art){msg.style.color="#d33";msg.textContent="Can't publish: this view isn't signed in as the page owner. Open the page from claude.ai > Artifacts in your own account, or use Copy my changes.";return}
+ ms.disabled=true;msg.textContent="Saving…";
+ try{const c=document.documentElement.cloneNode(true);
+  ["g1","g2","g3","catg","ls","v-shop","v-p"].forEach(i=>c.querySelector("#"+i).innerHTML="");
+  c.querySelector("#hV").innerHTML="";
+  ["md","pw"].forEach(i=>c.querySelector("#"+i).hidden=true);c.querySelector("#ml").innerHTML="";c.querySelector("#adm").hidden=true;
+  c.querySelector("#dr").classList.remove("on");
+  c.querySelector("#data").textContent=JSON.stringify(P).replace(/</g,"\\u003c");
+  await art.publish("<!DOCTYPE html>\n"+c.outerHTML);msg.textContent="Saved ✓ Live for visitors"}
+ catch(e){if(e&&e.code==="conflict")return;msg.style.color="#d33";
+  msg.textContent=e&&(e.code==="not_writer"||e.code==="not_granted")?"This account can't publish changes. Sign in as the page owner.":"Could not save: "+(e&&e.message||"try again")}
+ ms.disabled=false};
+
+/* ---- Pages ---- */
+var cur="home",cat="all",sort="def",sq="",pid="";
+const rel=()=>0;
+function go(h){if(location.hash==="#/"+h)route();else location.hash="#/"+h}
+function route(){const h=decodeURIComponent(location.hash.replace(/^#\/?/,"")).split("/");let v=h[0]||"home";
+ if(!["home","shop","p","about","contact","faq"].includes(v)){const el=document.getElementById(v);v="home";show(v);if(el)el.scrollIntoView();return}
+ if(v==="shop"){const c=h[1]||"all";if(c.startsWith("q:")){sq=c.slice(2);cat="all"}else{cat=CATS.some(a=>a[0]===c)?c:"all";if(window._k)window._k=0;else sq=""}}
+ if(v==="p")pid=h[1]||"";
+ show(v);window.scrollTo(0,0)}
+function show(v){cur=v;document.querySelectorAll(".view").forEach(m=>m.hidden=m.id!=="v-"+v);paint()}
+function paint(){if(cur==="shop")shop();else if(cur==="p")prod()}
+function shop(){let a=P.filter(x=>(cat==="all"||x.c===cat)&&(x.b+" "+x.n).toLowerCase().includes(sq));
+ if(sort==="lo")a=[...a].sort((m,n)=>m.p-n.p);if(sort==="hi")a=[...a].sort((m,n)=>n.p-m.p);
+ const t=(CATS.find(c=>c[0]===cat)||CATS[0])[1];
+ document.getElementById("v-shop").innerHTML=`<p class="bc"><a href="#/">Home</a> / Shop</p><h1>${sq?`Results for "${esc(sq)}"`:esc(t)}</h1>
+ <div class="chips">${CATS.map(c=>`<a href="#/shop/${c[0]}" class="${c[0]===cat?"on":""}" onclick="sq=''">${c[1]}</a>`).join("")}</div>
+ <div class="tb"><span>${a.length} product${a.length===1?"":"s"}</span><select id="so" aria-label="Sort"><option value="def">Featured</option><option value="lo"${sort==="lo"?" selected":""}>Price: low to high</option><option value="hi"${sort==="hi"?" selected":""}>Price: high to low</option></select></div>
+ <div class="grid">${a.map(card).join("")||'<p style="color:var(--mut)">No products found. Try another category or search.</p>'}</div>`;
+ document.getElementById("so").onchange=e=>{sort=e.target.value;shop()}}
+function prod(){const x=get(pid),el=document.getElementById("v-p");
+ if(!x){el.innerHTML='<p class="bc"><a href="#/">Home</a> / Product</p><h1>Product not found</h1><a class="btn" href="#/shop">Back to shop</a>';return}
+ const d=x.o>x.p?Math.round((x.o-x.p)/x.o*100):0,r=P.filter(y=>y.c===x.c&&y.id!==x.id).slice(0,4);
+ const msg=encodeURIComponent("Hi AmbroTech, I'm interested in: "+x.n+" ("+f(x.p)+")");
+ el.innerHTML=`<p class="bc"><a href="#/">Home</a> / <a href="#/shop">Shop</a> / ${esc(x.b)}</p><div class="pd"><div class="p" style="padding:0;border:0"><div class="ph">${im(x)}</div></div>
+ <div><div class="br">${esc(x.b)}</div><h1>${esc(x.n)}</h1><div class="pp"><b>${f(x.p)}</b>${d?`<s>${f(x.o)}</s><span class="off" style="position:static">−${d}%</span>`:""}</div>
+ <div class="st ${x.s?"":"o"}">${x.s?"In stock":"Order on request"}</div><p style="color:var(--mut)">Genuine product with warranty. Delivery in Nairobi and countrywide. Pay with M-Pesa.</p>
+ <button class="btn add2" data-id="${x.id}">Add to cart</button><a class="btn g" href="https://wa.me/254719800656?text=${msg}" target="_blank" rel="noopener">Ask on WhatsApp</a></div></div>
+ ${r.length?`<div class="sh"><h2>You may also like</h2></div><div class="grid">${r.map(card).join("")}</div>`:""}`;
+ el.querySelector(".add2").onclick=()=>add(x.id)}
+function cs(e){e.preventDefault();window.open("https://wa.me/254719800656?text="+encodeURIComponent("Hi AmbroTech, I'm "+cn.value+". "+cm.value),"_blank");return false}
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
